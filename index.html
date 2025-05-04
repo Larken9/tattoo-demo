@@ -12,28 +12,50 @@
     display=swap"
   rel="stylesheet"
 />
-    <base href="/tattoo-demo/">
 
   </head>
   <body>
     <!-- NAVBAR -->
     <nav class="navbar">
-      <ul class="nav-list nav-left">
-        <li><a href="#images">Images</a></li>
-        <li><a href="#about">About Us</a></li>
-        <li><a href="#gallery">Gallery</a></li>
-      </ul>
-
-      <a href="/" class="logo">
-        <img src="images/logo-white.png" alt="Studio Logo" />
-      </a>
-
-      <ul class="nav-list nav-right">
-        <li><a href="#news">News</a></li>
-        <li><a href="#features">Features</a></li>
-        <li><a href="#contact">Contact Us</a></li>
-      </ul>
-    </nav>
+        <!-- desktop left links -->
+        <ul class="nav-list desktop-menu nav-left">
+          <li><a href="#images">Images</a></li>
+          <li><a href="#about">About Us</a></li>
+          <li><a href="#gallery">Gallery</a></li>
+        </ul>
+      
+        <!-- logo -->
+        <a href="/" class="logo">
+          <img src="images/logo-white.png" alt="Studio Logo">
+        </a>
+      
+        <!-- desktop right links -->
+        <ul class="nav-list desktop-menu nav-right">
+          <li><a href="#news">News</a></li>
+          <li><a href="#features">Features</a></li>
+          <li><a href="#contact">Contact Us</a></li>
+        </ul>
+      
+        <!-- hamburger (mobile only) -->
+        <button class="hamburger" aria-label="Toggle menu" aria-expanded="false">
+          <span></span>
+          <span></span>
+          <span></span>
+        </button>
+      
+        <!-- mobile overlay menu -->
+        <ul class="nav-list mobile-menu">
+          <li><a href="#images">Images</a></li>
+          <li><a href="#about">About Us</a></li>
+          <li><a href="#gallery">Gallery</a></li>
+          <li><a href="#news">News</a></li>
+          <li><a href="#features">Features</a></li>
+          <li><a href="#contact">Contact Us</a></li>
+        </ul>
+      </nav>
+      
+      
+      
 
     <!-- HERO SLIDE -->
     <section class="hero">

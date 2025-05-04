@@ -69,3 +69,13 @@ document.addEventListener("DOMContentLoaded", () => {
     updateClasses();
   }, 3000);
 });
+
+document.addEventListener("DOMContentLoaded", () => {
+  const nav = document.querySelector(".navbar");
+  const btn = nav.querySelector(".hamburger");
+
+  btn.addEventListener("click", () => {
+    const isOpen = nav.classList.toggle("open");
+    btn.setAttribute("aria-expanded", isOpen);
+  });
+});

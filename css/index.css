@@ -172,64 +172,6 @@ body {
   color: #fff;
 }
 
-/* NAVBAR */
-.navbar {
-  position: absolute;
-  top: 0;
-  left: 0;
-  right: 0;
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  padding: 1rem 5%;
-  max-width: 1200px;
-  margin: 0 auto;
-
-  background: rgba(0, 0, 0, 0);
-  z-index: 10;
-}
-
-.nav-list {
-  list-style: none;
-  display: flex;
-  gap: 4rem;
-}
-.nav-list a {
-  color: #fff;
-  text-decoration: none;
-  text-transform: uppercase;
-  font-weight: 500;
-  letter-spacing: 1px;
-}
-.logo img {
-  height: 80px;
-}
-
-@media (max-width: 768px) {
-  .navbar {
-    flex-direction: column;
-    align-items: flex-start;
-    padding: 1rem 2%;
-  }
-
-  /* stack links and shrink gap */
-  .nav-list {
-    flex-wrap: wrap;
-    gap: 1.5rem;
-    margin-top: 0.75rem;
-  }
-
-  .logo img {
-    height: 50px;
-  }
-
-  /* if you want smaller text on mobile */
-  .nav-list a {
-    font-size: 0.9rem;
-    letter-spacing: 0.5px;
-  }
-}
-
 /* HERO SECTION */
 /* HERO WRAPPER */
 .hero {
@@ -259,15 +201,15 @@ body {
   z-index: 2;
 }
 
-/* YOUR ACTUAL tattoo-demo/../images */
+/* YOUR ACTUAL IMAGES */
 .hero .slide--1 {
-  background-image: url("../images/hero.png");
+  background-image: url("images/hero.png");
 }
 .hero .slide--2 {
-  background-image: url("../images/hero-2.webp");
+  background-image: url("images/hero-2.webp");
 }
 .hero .slide--3 {
-  background-image: url("../images/hero.png");
+  background-image: url("images/hero.png");
 }
 /* .slide--4, .slide--5… just copy/paste and change URL */
 
@@ -456,21 +398,21 @@ body {
   color: white; /* dark text to contrast */
 }
 
-/* BACKGROUND ../images */
+/* BACKGROUND IMAGES */
 .service-item.tattoos {
-  background-image: url("../images/hero.png");
+  background-image: url("images/hero.png");
 }
 .service-item.piercings {
-  background-image: url("../images/hero.png");
+  background-image: url("images/hero.png");
 }
 .service-item.flash {
-  background-image: url("../images/artist.png");
+  background-image: url("images/artist.png");
 }
 .service-item.apparel {
-  background-image: url("../images/artist-3.jpg");
+  background-image: url("images/artist-3.jpg");
 }
 .service-item.aftercare {
-  background-image: url("../images/aftercare.png");
+  background-image: url("images/aftercare.png");
 }
 
 /* RESPONSIVE: stack on small screens */
@@ -1103,4 +1045,138 @@ body {
 .portfolio-carousel-section .btn:hover {
   background: #001d1b;
   transform: translateY(-2px);
+}
+
+/* ------------------------------------
+   NAVBAR (desktop + mobile)
+   ------------------------------------ */
+.navbar {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 1rem 5%;
+  max-width: 1200px;
+  margin: 0 auto;
+  background: transparent;
+  z-index: 1000;
+}
+
+/* two desktop lists */
+.nav-list {
+  list-style: none;
+  display: flex;
+  gap: 4rem;
+}
+.nav-list a {
+  color: #fff;
+  text-transform: uppercase;
+  font-weight: 500;
+  letter-spacing: 1px;
+  text-decoration: none;
+  transition: color 0.2s;
+}
+.nav-list a:hover {
+  color: var(--accent);
+}
+
+/* logo */
+.logo img {
+  height: 80px;
+}
+
+/* mobile-only elements hidden by default */
+.hamburger,
+.mobile-menu {
+  display: none;
+}
+
+/* ------------------------------------
+     HAMBURGER + MOBILE OVERLAY
+     ------------------------------------ */
+.hamburger {
+  background: none;
+  border: none;
+  cursor: pointer;
+}
+.hamburger span {
+  display: block;
+  width: 24px;
+  height: 3px;
+  background: #fff;
+  border-radius: 2px;
+  margin-bottom: 4px;
+}
+.hamburger span:last-child {
+  margin-bottom: 0;
+}
+
+/* overlay */
+.navbar.open {
+  position: fixed;
+  inset: 0; /* top/right/bottom/left = 0 */
+  background: rgba(0, 0, 0, 0.95);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+.navbar.open .mobile-menu {
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+}
+.navbar.open .mobile-menu li a {
+  color: #fff;
+  font-size: 1.5rem;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  text-decoration: none;
+}
+/* hide desktop lists under overlay */
+.navbar.open .desktop-menu {
+  display: none;
+}
+
+@media (max-width: 768px) {
+  /* hide desktop nav */
+  .desktop-menu {
+    display: none;
+  }
+
+  /* show logo centered */
+  .logo {
+    position: absolute;
+    top: 1rem;
+    left: 50%;
+    transform: translateX(-50%);
+    z-index: 1010;
+  }
+  .logo img {
+    height: 50px;
+  }
+
+  /* show hamburger */
+  .hamburger {
+    display: flex;
+    position: absolute;
+    top: 1rem;
+    right: 1rem;
+    flex-direction: column;
+    z-index: 1011;
+  }
+
+  /* mobile list hidden until open */
+  .mobile-menu {
+    display: none;
+  }
+
+  /* also stack .nav-list a font sizing */
+  .nav-list a {
+    font-size: 0.9rem;
+    letter-spacing: 0.5px;
+  }
 }
