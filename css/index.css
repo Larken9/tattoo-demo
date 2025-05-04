@@ -1180,3 +1180,22 @@ body {
     letter-spacing: 0.5px;
   }
 }
+
+@media (max-width: 768px) {
+  /* stack & center the buttons as before */
+  .hero-content .btn-group {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+    align-items: center;
+  }
+
+  /* undo the full-width / max-width you had, stop wrapping */
+  .hero-content .btn-group .btn {
+    width: auto; /* shrink to fit */
+    max-width: none; /* remove any earlier cap */
+    white-space: nowrap; /* keep the text all on one line */
+    padding: 0.8rem 2rem; /* or bump it up if you need more breathing room */
+    box-sizing: border-box;
+  }
+}
