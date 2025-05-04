@@ -261,7 +261,7 @@ body {
 
 /* YOUR ACTUAL tattoo-demo/../images */
 .hero .slide--1 {
-  background-image: url("tattoo-demo/../images/hero.png");
+  background-image: url("../images/hero.png");
 }
 .hero .slide--2 {
   background-image: url("../images/hero-2.webp");
