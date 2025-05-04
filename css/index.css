@@ -261,13 +261,13 @@ body {
 
 /* YOUR ACTUAL IMAGES */
 .hero .slide--1 {
-  background-image: url("/images/hero.png");
+  background-image: url("images/hero.png");
 }
 .hero .slide--2 {
-  background-image: url("/images/hero-2.webp");
+  background-image: url("images/hero-2.webp");
 }
 .hero .slide--3 {
-  background-image: url("/images/hero.png");
+  background-image: url("images/hero.png");
 }
 /* .slide--4, .slide--5… just copy/paste and change URL */
 
@@ -458,19 +458,19 @@ body {
 
 /* BACKGROUND IMAGES */
 .service-item.tattoos {
-  background-image: url("/images/hero.png");
+  background-image: url("images/hero.png");
 }
 .service-item.piercings {
-  background-image: url("/images/hero.png");
+  background-image: url("images/hero.png");
 }
 .service-item.flash {
-  background-image: url("/images/artist.png");
+  background-image: url("images/artist.png");
 }
 .service-item.apparel {
-  background-image: url("/images/artist-3.jpg");
+  background-image: url("images/artist-3.jpg");
 }
 .service-item.aftercare {
-  background-image: url("/images/aftercare.png");
+  background-image: url("images/aftercare.png");
 }
 
 /* RESPONSIVE: stack on small screens */
